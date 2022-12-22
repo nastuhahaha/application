@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Roboto:wght@400;500;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', 'Roboto', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+input,
+select {
+  border: none;
+  padding: 5px 0;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 2px solid #c5c5c5;
+  color: #858585;
+  &:focus {
+    border-bottom: 2px solid #54079b;
+    color: #54079b;
+  }
+}
+
+.activeInput {
+  border: none;
+  padding: 5px 0;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 2px solid #54079b;
+  color: #54079b;
+}
+
+button {
+  background-color: #fff;
+  color: #c5c5c5;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid #c5c5c5;
+  padding: 10px 15px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    border: 2px solid #54079b;
+    color: #54079b;
+  }
+}
+
+.sidebar {
+  background-color: #07012c;
+  color: #fff;
+  width: 350px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 15px;
+
+  @media (max-width: 900px) {
+    width: 300px;
+  }
+
+  @media (max-width: 700px) {
+    width: 170px;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .links {
+    margin-top: 15px;
+
+    li {
+      margin-bottom: 10px;
+
+      a {
+        color: rgb(204, 204, 204);
+        transition: 0.2s ease-in-out;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  margin-left: 350px;
+
+  @media (max-width: 900px) {
+    margin-left: 300px;
+  }
+
+  @media (max-width: 700px) {
+    margin-left: 170px;
+  }
+}
+
+.addExpenseIncome {
+  padding: 15px;
+
+  .title {
+    text-align: center;
+  }
+
+  .form {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+}
+
+.home {
+  padding: 15px;
+
+  .title {
+    p {
+      font-size: 24px;
+      line-height: 20px;
+      color: rgb(173, 173, 173);
+    }
+
+    span {
+      font-size: 50px;
+    }
+  }
+
+  .sort {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+
+    @media (max-width: 840px) {
+      flex-direction: column;
+    }
+  }
+
+  .dataList {
+    margin: 10px 0;
+    .dataItem {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 2px solid #c5c5c5;
+      padding: 10px 0;
+      font-weight: 700;
+      color: rgb(90, 90, 90);
+      &:hover {
+        border-bottom: 2px solid #54079b;
+        color: #54079b;
+        .removeItemBtn {
+          color: #d13636;
+        }
+      }
+
+      .removeItemBtn {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.compare {
+  padding: 15px;
+
+  .title {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .inputs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+}
